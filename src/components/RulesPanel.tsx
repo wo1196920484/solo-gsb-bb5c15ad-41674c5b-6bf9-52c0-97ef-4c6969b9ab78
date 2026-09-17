@@ -7,9 +7,10 @@ import { RuleCard } from './RuleCard';
 interface Props {
   rules: Rule[];
   onRulesChange: (rules: Rule[]) => void;
+  onShare: () => void;
 }
 
-export function RulesPanel({ rules, onRulesChange }: Props) {
+export function RulesPanel({ rules, onRulesChange, onShare }: Props) {
   const fileRef = useRef<HTMLInputElement>(null);
   const [importError, setImportError] = useState<string | null>(null);
 
@@ -72,6 +73,7 @@ export function RulesPanel({ rules, onRulesChange }: Props) {
           <button onClick={exportJson} disabled={rules.length === 0}>
             导出 JSON
           </button>
+          <button onClick={onShare}>加密分享</button>
           <button onClick={() => onRulesChange(structuredClone(SAMPLE_RULES))}>
             载入示例
           </button>
