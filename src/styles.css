@@ -380,6 +380,141 @@ input.invalid {
   word-break: break-all;
 }
 
+/* ---- 加密分享 ---- */
+
+.app-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 8, 16, 0.72);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 10;
+}
+
+.modal {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 18px 20px;
+  width: 100%;
+  max-width: 560px;
+}
+
+.modal h2 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.modal form {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 12px;
+}
+
+.modal input {
+  width: 100%;
+}
+
+.modal input[readonly] {
+  font-family: var(--mono);
+  font-size: 12px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.share-gate {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.share-gate-panel {
+  width: 100%;
+  max-width: 640px;
+}
+
+.share-gate-panel h1 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.share-gate-panel form {
+  margin-top: 12px;
+}
+
+.share-gate-panel form input {
+  width: 100%;
+}
+
+.share-request {
+  margin: 12px 0;
+  word-break: break-all;
+}
+
+.share-request code {
+  font-family: var(--mono);
+  font-size: 12.5px;
+}
+
+.share-rules {
+  list-style: none;
+  margin: 0 0 4px;
+  padding: 0;
+  max-height: 320px;
+  overflow: auto;
+}
+
+.share-rules li {
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 10px;
+  margin-bottom: 8px;
+}
+
+.share-rule-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.share-rule-off {
+  color: var(--muted);
+  font-style: normal;
+  font-size: 12px;
+}
+
+.share-rule-detail {
+  color: var(--muted);
+  font-size: 13px;
+  word-break: break-all;
+}
+
+.share-rule-detail code {
+  color: var(--text);
+}
+
 /* ---- 结果横幅 ---- */
 
 .banner {
